@@ -1,0 +1,20 @@
+def simple_interest(p,t,r):
+    p=1000
+    t=12
+    r=3
+    result=(p*t*r/100)
+    print(result)
+
+    def area_of_rectangle(l, w):
+        area = l * w
+        perimeter = area * (l + w)
+        print("area is", area)
+        print("perimeter is", perimeter)
+        area_of_rectangle(20, 30)
+
+
+
+def speed_using_formula(u,t,a):
+    s=u*t+0.5*(a*t*t)
+    print(s)
+
