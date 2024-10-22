@@ -1,0 +1,104 @@
+a=int(input("Enter a number"))
+if(a>=90):
+    print("Your grade is A")
+elif(a>=80 and a<90):
+    print("Your grade is B")
+elif(a>=70 and a<80):
+    print("Your grade is C")
+elif(a>=60 and a<70):
+    print("Your grade is D")
+else:
+    print("Your grade is E")
+
+
+
+
+
+from tkinter import*
+from tkinter import messagebox
+
+
+
+window=Tk()
+window.config(bg="red")
+window.geometry("350x400")
+
+def grade():
+    score=int(e1.get())
+    if score >= 90:
+        print("your grade is A")
+    elif score >= 80 and score < 90:
+        print("your grade is B")
+    elif score >= 70 and score < 80:
+        print("your grad is C")
+    elif score >= 60 and score < 70:
+        print("your grad is D")
+    else:
+        print("your grad is E")
+    messagebox.showinfo("grad",grade)
+
+
+l1=Label(window,text="ENTER THE SCORE:")
+l1.grid(row=0,column=0)
+e1=Entry(window)
+e1.grid(row=0,column=1)
+'''l2=Label(window,text="Enter the HEIGHT:")
+l2.grid(row=1,column=0)
+e2=Entry(window)
+e2.grid(row=1,column=1)'''
+
+b1=Button(window,text="grade",command=grade)
+b1.grid(row=2,column=0)
+'''b2=Button(window,text="Perimeter")
+b2.grid(row=2,column=1)'''
+
+window.mainloop()
+
+
+
+
+
+
+from tkinter import*
+from tkinter import messagebox
+
+
+
+window=Tk()
+window.config(bg="red")
+window.geometry("350x400")
+
+def discount():
+    purchase=int(e1.get())
+    if purchase>=500:
+        messagebox.showinfo("RESULT","20 % DISCOUNT U WILL GET")
+        Total_amount=purchase*0.2
+    elif purchase>=200 and purchase<500:
+        messagebox.showinfo("RESULT", "20 % DISCOUNT U WILL GET")
+        Total_amount=purchase*0.1
+
+    else:
+        messagebox.showinfo("RESULT", "20 % DISCOUNT U WILL GET")
+        Total_amount=purchase
+
+
+
+
+l1=Label(window,text="ENTER THE AMOUNT:")
+l1.grid(row=0,column=0)
+e1=Entry(window)
+e1.grid(row=0,column=1)
+'''l2=Label(window,text="Enter the HEIGHT:")
+l2.grid(row=1,column=0)
+e2=Entry(window)
+e2.grid(row=1,column=1)'''
+
+b1=Button(window,text="Discount",command=discount)
+b1.grid(row=2,column=0)
+'''b2=Button(window,text="Perimeter")
+b2.grid(row=2,column=1)'''
+
+window.mainloop()
+
+
+
