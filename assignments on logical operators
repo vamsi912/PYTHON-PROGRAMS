@@ -1,0 +1,96 @@
+from  tkinter import*
+from tkinter import messagebox
+
+window=Tk()
+window.title("atmwithdraw")
+window.config(bg="orange")
+window.geometry("350x400")
+
+def atm_operation():
+    balance=10000
+    withdrawamnt=int(e1.get())
+    if withdrawamnt<=balance and withdrawamnt %100==0:
+        messagebox.showinfo("withdrawel","take your money and take your money in 100rs notes")
+
+    elif withdrawamnt > balance:
+        messagebox.showinfo("daily limit","your daily limit if finished")
+    else:
+        messagebox.showinfo("balance","total balance is")
+        total_bal=withdrawamnt-balance
+
+
+
+l1=Label(window,text="Enter the withdraw amnt")
+l1.grid(row=0,column=0)
+e1=Entry(window)
+e1.grid(row=0,column=1)
+
+b1=Button(window,text="withdraw",command=atm_operation)
+b1.grid(row=2,column=1)
+
+
+window.mainloop()
+
+
+
+
+from tkinter import*
+from tkinter import messagebox
+w=Tk()
+w.title("discount")
+w.config(bg="blue")
+w.geometry("250x300")
+def discount_criteria():
+    purchase_amount=int(e1.get())
+    membership=True
+    if purchase_amount>5000 and membership==True:
+        messagebox.showinfo("discount details","you will get 20% discount")
+    else:
+        messagebox.showinfo("Discount details ","your not get any discount")
+
+l1=Label(w,text="Total Purchase Amount")
+l1.grid(row=0,column=0)
+e1=Entry(w)
+e1.grid(row=0,column=1)
+
+b1=Button(w,text="Discount",command=discount_criteria)
+b1.grid(row=2,column=1)
+
+w.mainloop()
+
+
+
+
+from tkinter import*
+from tkinter import messagebox
+
+
+window=Tk()
+window.title=("speed_limit")
+window.config(bg="black")
+window.geometry("300x400")
+
+def speed_limit():
+    speed=int(e1.get())
+    limit=int(e2.get())
+    if(limit<90):
+        messagebox.showinfo("Result","No penalty")
+    elif(limit<=90):
+        messagebox.showinfo("Result","Warning-Your are crossing your speed limit.Plese reduce your speed limit")
+    else:
+        messagebox.showinfo("Result","You have crossed your spped limit and your penalty is 2000")
+
+
+l1=Label(window,text="Enter the speed")
+l1.grid(row=0,column=0)
+e1=Entry(window)
+e1.grid(row=0,column=1)
+l2=Label(window,text="Enter the speed_limit")
+l2.grid(row=1,column=0)
+e2=Entry(window)
+e2.grid(row=1,column=1)
+b1=Button(window,text="speed_limit",command=speed_limit)
+b1.grid(row=2,column=1)
+
+window.mainloop()
+
